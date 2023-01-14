@@ -1,22 +1,22 @@
 ## EE346lab7
 # Lab 7 Autonomous Navigation with SMACH
 
-### 1.Introduction
+### 1. Introduction
 
 Refer to the figure, the overall task starts from location P1, and the robot should successively move to P2, P3, P4 and back to P1 in that order before moving toward the ArUco marker to recognize the ID of the marker placed near the red triangle in the floor plan. The ArUco marker ID is a number n = 2, 3 or 4 and, upon recognizing the ID, the robot should beep with the buzzer on TurtleBot3 n times, and then move to Pn before coming to a stop. 
 
 <div align=center>
-<img src="https://github.com/wansaisuccessful/EE346lab7/blob/main/figures/1.png"/>
+<img src="https://github.com/wansaisuccessful/EE346lab7/blob/main/figures/2.png"/>
 </div>
 
-### 2.Approach 
+### 2. Approach 
 
 #### 2.1 Mapping
 
 We first built maps for the racing environment using GMapping(roslaunch turtlebot3_slam turtlebot3_slam.launch). After controlling the robot running around the competition field (roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch), we can get maps as showing below.
 
 <div align=center>
-<img src="https://github.com/wansaisuccessful/EE346lab7/blob/main/figures/2.png"/>
+<img src="https://github.com/wansaisuccessful/EE346lab7/blob/main/figures/3.png"/>
 </div>                    
 
 #### 2.2 Navigation
@@ -30,7 +30,7 @@ Our navigation program is written base on the code in navigation/Tutorials/Sendi
 The smach viewer is a GUI that shows the state of hierarchical SMACH state machines. It can visualize the possible transitions between states, as well as the currently active state and the values of user data that is passed around between states. In this lab we use SMACH to move to the goal depend on the ID of the aruco.
 
 <div align=center>
-<img src="https://github.com/wansaisuccessful/EE346lab7/blob/main/figures/3.png"/>
+<img src="https://github.com/wansaisuccessful/EE346lab7/blob/main/figures/1.png"/>
 </div>
 
 #### 2.4  Aruco 
@@ -65,7 +65,7 @@ We also enlarge the xy_goal_tolerance and the yaw_goal_tolerance, which makes th
 <img src="https://github.com/wansaisuccessful/EE346lab7/blob/main/figures/5.png"/>
 </div>
 
-### 3.Experiment Content
+### 3. Experiment Content
 
 1.(Remote PC) roscore \
 2.(Remote PC) ssh pi@raspberrypi and input password to start SSH session with Turtlebot \
