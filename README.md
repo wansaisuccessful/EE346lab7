@@ -3,7 +3,7 @@ Lab 7 Autonomous Navigation with SMACH
 1.Introduction
 Refer to the figure, the overall task starts from location P1, and the robot should successively move to P2, P3, P4 and back to P1 in that order before moving toward the ArUco marker to recognize the ID of the marker placed near the red triangle in the floor plan. The ArUco marker ID is a number n = 2, 3 or 4 and, upon recognizing the ID, the robot should beep with the buzzer on TurtleBot3 n times, and then move to Pn before coming to a stop. 
 <div align=center>
-<img src="[https://img-blog.csdnimg.cn/20200317222802798.jpg](https://github.com/wansaisuccessful/EE346lab7/blob/main/figures/1.png)"/>
+<img src="https://github.com/wansaisuccessful/EE346lab7/blob/main/figures/1.png"/>
 </div>
 
 2.Approach 
